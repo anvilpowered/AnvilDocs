@@ -1,5 +1,7 @@
 language: node_js
 cache: yarn
+env:
+  - secure: "oGpfI1dJx0aZr87VPDIT0dRe1zcAflYvjRR0erOQAGqXoWpeF1nm1dNGwZy+Np7bfmgTLN3cYyk336w4oF/YZL8Smm2xCJZdiERxGWDFbqL6ykVRZj/kRreASlnXYtSs/Ja6eJiwOypmXEMT0ZZp7hlMdl3hnx7LDMdTOOmhE4epdz5xU8QEHvG4l/nCgtuKr3dHxON+4JS5XrAIgpWehyUGUoijL9cAZx2H1yYbGqKdRc2of0SSYt0Vo+WSgfblEdujoRZDsXIreVffihESQtm/TC/smZo7oEfJCV9hR9tAkyoQac7YWn1aot5jd6bdc0sJPEQ1bIJFpuDgSyXQhchm2Rj+aLvVcV5vrZ9cS8l3f+lke4Lc+D27kb9MhcKO8biTAoTTNf/Rf1XhpIOHyQXvqIFJtWxCDWXFlnGG7QflfJPu7fVLH3m6viWeFVYW5JJYjG83Mo4zNV7n+F6gRCD0qYAu88DcinOh99V4tiTWzpZ862DH/oi9aj79egkJyv75NzuNIOK03Cz7YEjKtVnRQwdFACxzTpmaqAkVIok4djeuBcO6hWjY+/Q/2apD8EOqYrHEtVQfHiH052Jqj6ayxFapBJGMqXMUy1JXJZm4Epgc8KQfkc9D6pkWpgrsKHEF1PDJ8PLy+ZrdB1ftfulZgN+2Vyd0Gve0QGB3pso="
 before_script:
   - npm install -g gatsby-cli
 node_js:
@@ -7,7 +9,6 @@ node_js:
 script:
   - yarn build
 deploy:
-  deploy_key: github_deploy_keu
   provider: script
   script: yarn run deploy
   skip_cleanup: true
