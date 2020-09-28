@@ -26,7 +26,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gh-pages -d public -b gh-pages -r https://stg-allen@github.com/AnvilPowered/AnvilWebsite.git"
+    "deploy": "gh-pages -d public -b gh-pages -r https://stg-allen:$GH_TOKEN@github.com/AnvilPowered/AnvilWebsite.git"
   },
   "repository": {
     "type": "git",
