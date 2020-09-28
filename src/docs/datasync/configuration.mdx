@@ -1,0 +1,31 @@
+---
+title: DataSync Configuration
+---
+
+## Serialize Section
+|Setting|Description|Default|
+|-------|-----------|-------|
+|deserializeOnJoin|Whether DataSync should deserialize players on join|true|
+|deserializeOnJoinDelayMillis|The number of milliseconds DataSync should wait before downloading a snapshot on join|0|
+|enabledSerializers|Things to sync to DB| datasync:experience, datasync:gameMode, datasync:health, datasync:hunger, datasync:inventory|
+|serializeOnDeath|Whether DataSync should serialize players to the DB on death|true|
+|serializeOnDisconnect|Whether DataSync should serialize players to the DB on disconnect|true|
+
+## Snapshot Section
+|Setting|Description|Default|
+|-------|-----------|-------|
+|minCount|Minimum number of snapshots to keep before deleting any|5|
+|optimizationStrategy|Snapshot optimization strategy|"60:24", "1440:7"|
+|uploadInterval|Interval for automatic serialization task|5|
+
+## Keys Section
+|Key Name|Setting|
+|--------|-------|
+|SERIALIZE_ENABLED_SERIALIZERS|serialize.enabledSerializers|
+|DESERIALIZE_ON_JOIN|serialize.deserializeOnJoin|
+|DESERIALIZE_ON_JOIN_DELAY_MILLIS|serialize.deserializeOnJoinDelayMillis|
+|SERIALIZE_ON_DEATH|serialize.serializeOnDeath|
+|SERIALIZE_ON_DISCONNECT|serialize.serializeOnDisconnect|
+|SNAPSHOT_MIN_COUNT|snapshot.minCount|
+|SNAPSHOT_OPTIMIZATION_STRATEGY|snapshot.optimizationStrategy|
+|SNAPSHOT_UPLOAD_INTERVAL_MINUTES|snapshot.uploadInterval|
