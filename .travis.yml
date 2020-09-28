@@ -12,6 +12,6 @@ deploy:
   deploy_key: github_deploy_keu
   provider: script
   script: yarn run deploy
-  cleanup: false
+  skip_cleanup: true
   on:
     branch: master
