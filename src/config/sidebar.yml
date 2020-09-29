@@ -5,7 +5,7 @@
     - label: 'Introduction'
       link: '/'
     - label: 'Discord'
-      link: 'discord.anvilpowered.org'
+      link: 'http://discord.anvilpowered.org'
     - label: 'Github'
       link: 'https://github.com/anvilpowered/'
     - label: 'TeamCity'
