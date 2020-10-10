@@ -6,13 +6,51 @@ title: Services
 
 ### About
 
+The Kick service provides an easy way to kick a player from the server.
+
 ### Usage
+
+```java
+public class CommonKickCommand<TString, TCommandSource> {
+
+    @Inject
+    protected TextService<TString, TCommandSource> textService;
+
+    @Inject
+    protected KickService kickService;
+
+    public void onCommand(String targetUser, TCommandSource source, String reason) {
+        kickService.kick(targetUser, reason);
+    }
+}
+```
 
 ## Permission Service
 
 ### About
 
+The Permission services provides an easy way to handle permission checking.
+
 ### Usage
+
+The following command will check if the player has the required permission.
+
+```java
+public class CommonInfoCommand<TString, TCommandSource> {
+
+    @Inject
+    protected TextService<TString, TCommandSource> textService;
+
+    @Inject
+    protected PermissionService permissionService;
+
+    public void onCommand(String targetUser, TCommandSource source) {
+        if(!permissionService.hasPermission(source, "anvil.command.info")){
+            textService.send("You do not have permission for this command!", source);
+        }
+    }
+}
+```
 
 ## Text Service
 
