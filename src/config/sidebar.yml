@@ -16,10 +16,16 @@
       link: '/anvil/commands'
     - label: 'Configuration'
       link: '/anvil/configuration'
-    - label: 'Developers'
-      link: '/anvil/developers'
+    - label: 'Registry Edit'
+      link: '/anvil/regedit'
     - label: 'Releases'
       link: 'https://github.com/anvilpowered/anvil/releases'
+- label: 'Anvil - Development'
+  items:
+    - label: 'Introduction'
+      link: '/anvil/development/introduction'
+    - label: 'Services'
+      link: '/anvil/development/services'
 - label: 'Catalyst'
   items:
     - label: 'About'

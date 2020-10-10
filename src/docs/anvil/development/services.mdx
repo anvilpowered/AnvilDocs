@@ -1,0 +1,85 @@
+---
+title: Services
+---
+
+## Kick Service
+
+### About
+
+### Usage
+
+## Permission Service
+
+### About
+
+### Usage
+
+## Text Service
+
+### About
+
+### Usage
+
+## Time Format Service
+
+### About
+
+The Time Format service provides an easy way to translate a user input to a usable duration.
+
+**Note: The TimeFormatService will handle timezones as defined in the Anvil config.**
+
+### Usage
+
+The following method will attempt to parse the input as a duration of seconds and return the number of seconds.
+```java
+Optional<Long> oneDayInSeconds = getSeconds("1d");
+
+public Optional<Long> getSeconds(String input) {
+    return timeFormatService.parseSeconds(input);
+}
+```
+
+The following method will attempt to parse the input as the previous method, however if it cannot parse the input an
+ error will be thrown.
+```java
+public Long getSeconds(String input) {
+    return timeFormatService.parseSecondsUnsafe(input);
+}
+```
+
+The following method will attempt to parse the input and return a duration.
+```java
+public Optional<Duration> getDuration(String input){
+    return timeFormatService.parseDuration(input);
+}
+```
+
+## User Service
+
+### About
+The User service allows developers to translate UUIDs to UserNames or UserNames to UUIDs. The translation occurs by
+ querying the CoreMembers collection in the database specified in the Anvil config. On platforms that store this data
+ , Anvil will attempt to get the data from the platform, if the data isn't present Anvil will query the database.
+
+### Usage
+
+The following command will attempt to get the UUID of a user by their username.
+
+```java
+
+public class CommonInfoCommand<TString, TCommandSource> {
+
+    @Inject
+    protected TextService<TString, TCommandSource> textService;
+
+    public void onCommand(String targetUser, TCommandSource source) {
+        Optional<TUser> user = userService.getUser(targetUser);
+
+        if (!user.isPresent()) {
+            textService.send(textService.deserialize("Could not find the user " + targetUser), source);
+            return;
+        }
+
+    }
+}
+```
