@@ -11,6 +11,8 @@ Aliases: `cban`
 
 Usage: `/ban <name> [reason]`
 
+Description: Bans a player.
+
 
 ## TempBan
 
@@ -20,7 +22,7 @@ Aliases: `ctempban`
 
 Usage: `/tempban <user> <duration> [reason]`
 
-
+Description: Temporarily bans a player.
 
 ## Broadcast
 
@@ -29,6 +31,8 @@ Permission: `catalyst.command.broadcast`
 Aliases: `cbroadcast`
 
 Usage: `/broadcast [message]`
+
+Description: Broadcast a message to the proxy.
 
 
 ## Find
@@ -39,6 +43,7 @@ Aliases: `cfind`
 
 Usage: `/find <player>`
 
+Description: Find which server a player on.
 
 ## Info
 
@@ -48,6 +53,8 @@ Aliases: `cinfo`
 
 Usage: `/info <player>`
 
+Description: Get the information of a player.
+
 
 ## Kick
 
@@ -56,6 +63,8 @@ Permission: `catalyst.command.kick`, `catalyst.command.kick.exempt`
 Aliases: `ckick`
 
 Usage: `/kick <player> [reason]`
+
+Descrption: Kick a player.
 
 
 ## Swear / Exception
@@ -74,6 +83,7 @@ Additional Usage:
 
 * Usage: `/exception list`
 
+Description: Add or remove swear/exception words from the list.
 
 ## List
 
@@ -88,9 +98,11 @@ Usage: `/list`
 
 Permission: `catalyst.command.message`
 
-Aliases: `msg`, `pm`, `tell`, `whisper`, `m`, `t`
+Aliases: `msg`, `tell`, `whisper`, `m`, `t`
 
 Usage: `/msg <player> [message]`
+
+Description: Send a message to another player.
 
 
 ## Mute
@@ -101,14 +113,18 @@ Aliases: `cmute`
 
 Usage: `/mute <player> [reason]`
 
+Description: Mute a player.
+
 
 ## Nickname
 
 Permission: `catalyst.command.nickname`, `catalyst.command.nickname.color`, `catalyst.command.nickname.other`
 
-Aliases: `cnick`, nickname
+Aliases: `cnick`, `nickname`
 
 Usage: `/nick <nickname>` or `/nick <player> <nickname>`
+
+Description: Set your nickname or that of another player.
 
 
 ## Send
@@ -119,13 +135,18 @@ Aliases: `csend`
 
 Usage: `/send <player> <server>`
 
+Description: Send a player to a server.
+
 
 ## SocialSpy
 
 Permission: `catalyst.command.socialspy`, `catalyst.command.socialspy.onjoin`
 
+Aliases: `ss`
+
 Usage: `/socialspy`
 
+Description: View private messages of other players.
 
 ## Stafflist
 
@@ -139,6 +160,8 @@ Permission: `catalyst.stafflist.base`
 
 Usage: `/stafflist`
 
+Description: View all active staff.
+
 ## TempMute
 
 Permission: `catalyst.command.mute`
@@ -146,3 +169,15 @@ Permission: `catalyst.command.mute`
 Aliases: `ctempmute`
 
 Usage: `/tempmute <player> <duration> [reason]`
+
+Description: Temporarily mute a player.
+
+## Ignore
+
+Permission: `catalyst.command.ignore`, `catalyst.command.ignore.exempt`
+
+Aliases: `cignore`
+
+Usage: `/ignore <player>`
+
+Description: Ignore another player.
