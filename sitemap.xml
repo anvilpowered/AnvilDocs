@@ -11,6 +11,11 @@
 <url> <loc>http://www.anvilpowered.org/datasync/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://www.anvilpowered.org/datasync/commands</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://www.anvilpowered.org/datasync/configuration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://www.anvilpowered.org/downloads/anvil</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://www.anvilpowered.org/downloads/catalyst</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://www.anvilpowered.org/downloads/datasync</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://www.anvilpowered.org/downloads/landing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://www.anvilpowered.org/downloads/ontime</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://www.anvilpowered.org/ontime/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://www.anvilpowered.org/ontime/commands</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://www.anvilpowered.org/ontime/configuration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
