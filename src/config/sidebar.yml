@@ -4,6 +4,8 @@
   items:
     - label: 'Introduction'
       link: '/'
+    - label: 'Downloads'
+      link: '/downloads/landing'
     - label: 'Discord'
       link: 'https://discord.gg/mUujvHD'
     - label: 'Github'

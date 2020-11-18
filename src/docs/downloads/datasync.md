@@ -1,0 +1,47 @@
+---
+title: DataSync Downloads
+---
+
+|Version|Link|
+|-------|----|
+|0.7.0|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.7.0)|
+|0.6.2|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.6.2)|
+|0.6.1|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.6.1)|
+|0.6.0|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.6.0)|
+|0.5.2|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.5.2)|
+|0.5.1|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.5.1)|
+
+
+## Changelog
+
+### 0.7.0
+This is the effective re-release of this project. Among other things, the name has been changed from MSDataSync to DataSync.
+
+This release has many bug fixes and improvements over MSDataSync and requires Anvil v0.2.0. Please note that the data format of this version is completely incompatible with previous versions and requires a new database.
+
+If you are currently using an older version of this plugin, you must either rename or delete your old data directory if you are using Xodus or rename or delete the database if you are using MongoDB. The good news is the Minecraft server stores inventories too. This means you can install the new version and your players will continue to have their inventories.
+
+### 0.6.2
+
+Bug Fixes
+
+- Fixed bug that may cause an inventory rollback when joining
+- Fixed bug where the most recent snapshot was sometimes deleted during optimization mode 'all'
+
+### 0.6.1
+
+Fixes bug with mongodb authentication
+
+### 0.6.0
+
+Fixed some more modded items, added wait option for deserialize
+
+### 0.5.2
+
+Fixed some modded items
+
+Merge branch 'master' of https://github.com/MilSpecSG/MSDataSync
+
+### 0.5.1
+
+First public release

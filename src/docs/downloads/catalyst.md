@@ -1,0 +1,60 @@
+---
+title: Catalyst Downloads
+---
+
+|Version|Link|
+|-------|----|
+|0.3|[download]()|
+|0.2.1|[download](https://github.com/AnvilPowered/Catalyst/releases/download/v0.2.1/Catalyst-Velocity-0.2.1.jar)|
+|0.2.0|[download](https://github.com/AnvilPowered/Catalyst/releases/download/v0.2.0/Catalyst-Velocity-0.2.0.jar)|
+|0.1.3|[download](https://github.com/AnvilPowered/Catalyst/releases/download/0.1.3/Catalyst-Velocity-0.1.3.jar)|
+|0.1.2|[download](https://github.com/AnvilPowered/Catalyst/releases/download/0.1.2/Catalyst-Velocity-0.1.2.jar)|
+
+## Changelog
+
+### 0.2.1
+Fixes in this version:
+
+- Join/Leave spam when the backend server is offline
+- A typo that restricted users from disabling /server
+- StaffChat being broadcasted to the main discord channel
+- StaffChat not working when proxy-wide chat was disabled.
+
+### 0.2.0
+New in this version:
+
+- Command logging
+- More config options
+- New SocialSpy and StaffChat format
+- Safer Luckperms interactions
+- Fixed an error that occurred when a player pinged the proxy and the backend server is offline
+- Added %players% placeholder to the discord Now Playing field
+- Added more discord commands ex. !online, !players, !list
+- Migrating from 0.1.3 to 0.2.0:
+
+Note: You MUST copy your config changes into the new config for Catalyst to function properly.
+- Copy the existing Catalyst config to another directory
+- Remove the existing config from the velocity directory
+- Remove Anvil 0.1.0 and Catalyst 0.1.3 from the plugins folder
+- Download Anvil 0.2.0 and Catalyst 0.2.0
+- Update Velocity 1.1.0 to the latest snapshot here
+- Place all jars in their respective directories, and boot the proxy.
+- Open both new and old versions of the Catalyst config and copy the fields over.
+
+### 0.1.3
+Fixes in this version:
+
+- Fixed leave messages so they can accept color codes
+- Cleaned up the /server command so that the dividers don't wrap to the next line
+
+### 0.1.2
+Changes in this version:
+
+- Added ViaVersion support
+- Added Emojis (texture pack provided below)
+- Fixed chat color being reset when saying another player name in chat
+- Fixed duration message not displaying properly when banning/muting a player
+- Added a better description of AdvancedServerInfo
+- Removed the long list of swears from the config by default, they can be found below
+- Fixed a bug where the MOTD defined in the Velocity config would be shown instead of the one defined in the Catalyst config
+- Fixed an issue where disabling proxy-chat in the config wouldn't actually disable it
