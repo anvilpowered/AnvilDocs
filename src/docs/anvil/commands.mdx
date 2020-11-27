@@ -1,0 +1,21 @@
+---
+title: Commands
+---
+
+## /anvil
+|Subcommand|Description|Permission|
+|----------|-----------|----------|
+|**help**| Shows base help page||
+|**plugins**| Shows loaded plugins using Anvil|anvil.admin.plugins|
+|**reload &#91;-a&#124;--all&#124;-r&#124;--regex&#93; &#91;&lt;plugin&gt;&#93;**| Reloads a specified plugin|anvil.admin.reload|
+|**version**| Shows the plugin version||
+|**regedit**| [subcommands](#anvil-regedit)|anvil.admin.regedit|
+
+## /anvil regedit
+|Subcommand|Description|Permission|
+|----------|-----------|----------|
+|**help**| Shows regedit help page|anvil.admin.regedit|
+|**select &lt;reg&gt;**| Selects a registry|anvil.admin.regedit|
+|**start &lt;env&gt;**| Starts a regedit with the specified environment|anvil.admin.regedit|
+|**cancel**| Cancels a stage|anvil.admin.regedit|
+|**key &lt;key&gt; &#91;info&#124;set&#124;unset&#124;unstage&#93; &#91;&lt;value&gt;&#93;**| Manipulates a key|anvil.admin.regedit|

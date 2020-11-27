@@ -2,30 +2,32 @@
 title: DataSync Commands
 ---
 
-## Base commands
+## /sync
+|Subcommand|Description|Permission|
+|----------|-----------|----------|
+|**help**| Shows base help page||
+|**lock &#91;on&#124;off&#93;**| Locks / unlocks commands|datasync.lock|
+|**optimize&#124;opt&#124;o**| [subcommands](#sync-optimize)|datasync.optimize.base|
+|**reload**| Reloads plugin|datasync.reload|
+|**snapshot&#124;snap&#124;s**| [subcommands](#sync-snapshot)|datasync.snapshot.base|
+|**test**|Uploads and then downloads a snapshot|datasync.test|
+|**upload&#124;up**| Uploads a snapshot for all players on the server|datasync.snapshot.create|
 
-- `/sync`
-  - `/sync help` Shows base help page.
-  - `/sync info` Shows info page.
-  - `/sync lock [<on:off>]` Locks / unlocks commands.
-  - `/sync optimize, opt, o` Optimize base command (To delete old snapshots)
-  - `/sync reload` Reloads plugins
-  - `/sync snapshot, snap, s` Snapshot base command
-  - `/sync upload, up` Uploads all players on the server.
+## /sync optimize
+|Subcommand|Description|Permission|
+|----------|-----------|----------|
+|**help**| Shows optimize help page|datasync.optimize.base|
+|**info&#124;i**| Gets info on the current manual optimization|datasync.optimize.base|
+|**start&#124;s &lt;all&#124;user&gt; &#91;&lt;user&gt;&#93;**| Starts manual optimization, deletes old snapshots. (mode "all" will optimize *every* user in the database)|datasync.optimize.all|
+|**stop**| Stops manual optimization|datasync.optimize.base|
 
-## Sub commands
-
-- `/sync optimize`
-  - `/sync optimize help` Shows optimize help page.
-  - `/sync optimize info, i` Gets info on current manual optimization
-  - `/sync optimize start, s <all:user> [<user>]` Starts manual optimization, deletes old snapshots. (mode `all` will optimize EVERY user in the database)
-  - `/sync optimize stop` Stops manual optimization.
-
-- `/sync snapshot`
-  - `/sync snapshot create, c, upload, up <user>` Creates a manual snapshot for user and uploads to DB.
-  - `/sync snapshot delete <user> <date>` Deletes snapshot for user.
-  - `/sync snapshot edit, e, view <user> [<date>]` Edit / view snapshot for user from DB. If no date is provided, latest snapshot is selected.
-  - `/sync snapshot help` Shows snapshot help page.
-  - `/sync snapshot info, i <user> [<date>]` More info for snapshot for user from DB. If no date is provided, latest snapshot is selected.
-  - `/sync snapshot list, l <user>` Lists available snapshots for user.
-  - `/sync snapshot restore, r, download, down <user> [<date>]` Manually restores snapshot from DB. If no date is selected, latest snapshot is restored.
+## /sync snapshot
+|Subcommand|Description|Permission|
+|----------|-----------|----------|
+|**create&#124;c&#124;upload&#124;up &lt;user&gt;**| Creates a manual snapshot for the user and uploads to DB|datasync.snapshot.create|
+|**delete &lt;user&gt; &lt;date&gt;**| Deletes snapshot for user|datasync.snapshot.delete|
+|**edit&#124;e&#124;view &lt;user&gt; &#91;&lt;date&gt;&#93;**| Edits / views snapshot for user from DB. If no date is provided, latest snapshot is selected|datasync.snapshot.view.base datasync.snapshot.view.edit|
+|**help**| Shows snapshot help page|datasync.snapshot.base|
+|**info&#124;i &lt;user&gt; &#91;&lt;date&gt;&#93;**| Shows info for a snapshot. If no date is provided, latest snapshot is selected|datasync.snapshot.base|
+|**list&#124;l &lt;user&gt; &#91;&lt;date&gt;&#93;**| Lists available snapshots for user|datasync.snapshot.base|
+|**restore&#124;r&#124;download&#124;down &lt;user&gt; &#91;&lt;date&gt;&#93;**| Manually restores snapshot from DB. If no date is provided, latest snapshot is selected|datasync.snapshot.restore|

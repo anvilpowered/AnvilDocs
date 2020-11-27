@@ -2,50 +2,12 @@
 title: OnTime Commands
 ---
 
-## Add
-
-Permission: `ontime.admin.edit`
-
-Aliases: `a, add`
-
-Usage: `ontime add <user> <time>`
-
-## Check
-
-- Permissions
-
-  - User: `ontime.user.check`
-
-  - Admin: `ontime.admin.check`
-
-Aliases: `c, check info, i`
-
-Usage: `ontime check [<user>]`
-
-## Import
-
-About: This commands is used to import data from RankUp. For more information, click [here](https://github.com/AnvilPowered/OnTime/wiki/Importing-Data-From-Rankup)
-
-Usage: `ontime import <path>`
-
-## Set
-
-Permission: `ontime.admin.edit`
-
-Aliases: `set, s, settotal, st`
-
-Usage: `ontime set <user> <time>`
-
-## Set Bonus
-
-Permission: `ontime.admin.edit`
-
-Aliases: `setbonus, sb`
-
-Usage: `ontime setbonus <user> <time>`
-
-## Version
-
-Aliases: `v, version`
-
-Usage: `ontime version`
+## /ontime
+|Subcommand|Description|Permission|
+|----------|-----------|----------|
+|**add &lt;user&gt; &lt;time&gt;**| Adds bonus time to a user|ontime.admin.edit|
+|**check&#124;info&#124i &#91;&lt;user&gt;&#93;**| Checks playtime|ontime.user.check ontime.admin.check|
+|**help**| Shows plugin help page||
+|**import &lt;path&gt;**| Imports data from rankupper|ontime.admin.import|
+|**setbonus&#124;sb &lt;user&gt; &lt;time&gt;**| Sets bonus playtime for a user|ontime.admin.edit|
+|**version&#124;v**|Shows the plugin version||
