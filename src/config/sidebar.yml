@@ -4,8 +4,6 @@
   items:
     - label: 'Introduction'
       link: '/'
-    - label: 'Downloads'
-      link: '/downloads/landing'
     - label: 'Discord'
       link: 'http://discord.anvilpowered.org'
     - label: 'Github'
@@ -21,7 +19,7 @@
     - label: 'Developers'
       link: '/anvil/developers'
     - label: 'Releases'
-      link: 'https://github.com/anvilpowered/anvil/releases'
+      link: '/anvil/releases'
 - label: 'Catalyst'
   items:
     - label: 'About'
@@ -31,7 +29,7 @@
     - label: 'Configuration'
       link: '/catalyst/configuration'
     - label: 'Releases'
-      link: 'https://github.com/anvilpowered/catalyst/releases'
+      link: '/catalyst/releases'
 - label: 'DataSync'
   items:
     - label: 'About'
@@ -41,7 +39,7 @@
     - label: 'Configuration'
       link: '/datasync/configuration'
     - label: 'Releases'
-      link: 'https://github.com/anvilpowered/datasync/releases'
+      link: '/datasync/releases'
 - label: 'OnTime'
   items:
     - label: 'About'
@@ -51,4 +49,4 @@
     - label: 'Configuration'
       link: '/ontime/configuration'
     - label: 'Releases'
-      link: 'https://github.com/anvilpowered/ontime/releases'
+      link: '/ontime/releases'

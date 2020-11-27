@@ -1,0 +1,79 @@
+---
+title: Releases
+---
+
+|Version|Link|
+|-------|----|
+|0.3.0|[download](https://github.com/AnvilPowered/Anvil/releases/tag/v0.3.0)|
+|0.2.1|[download](https://github.com/AnvilPowered/Anvil/releases/tag/v0.2.1)|
+|0.2.0|[download](https://github.com/AnvilPowered/Anvil/releases/tag/v0.2.0)|
+|0.1.3|[download](https://github.com/AnvilPowered/Anvil/releases/tag/v0.1.3)|
+|0.1.2|[download](https://github.com/AnvilPowered/Anvil/releases/tag/v0.1.2)|
+|0.1.1|[download](https://github.com/AnvilPowered/Anvil/releases/tag/v0.1.1)|
+|0.1.0|[download](https://github.com/AnvilPowered/Anvil/releases/tag/v0.1.0)|
+
+## Changelog
+
+### 0.3.0
+This release has breaking changes. Exercise caution when updating as Anvil v0.2 plugins will not work with Anvil v0.3
+
+**New features**
+- RegEdit
+  - You can now edit the config with commands! Use /anvil[b|v] regedit start &lt;env&gt;
+  - Requires permission anvil.admin.regedit, and access to sensitive settings (such as hostnames, passwords) is disabled by default
+- RestrictionService: you can freeze players via the api now. Pick from movement, interaction, inventory, commands and damage (or any combination thereof)
+- Added appendPrefix() in TextService that uses the bound PluginInfo
+- Added TIME_ZONE to config, used by the TimeFormatService
+- Added some useful methods to UserService
+
+**Changes**
+- Bumped configurate to v3.7
+- Moved from kyori text to adventure for velocity
+- TimeFormatService now parses and returns formatted strings with weeks
+- Key stuff
+  - Keys are now constructed with `Key.builder()` instead of anonymous class through protected constructor.
+  - Primarily thanks to type erasure, `Key` no longer extends `TypeToken`
+- Flattened some unnecessarily nested packages
+
+**Fixes**
+- Tab completion fixes on spigot/bungee
+- Fixed some bugs with load order in the BaseRegistry
+- Many more that aren't listed here
+
+
+### 0.2.1
+Squashed bugs
+
+- Command suggestions work properly now
+- Fixed an NPE
+- Small code cleanups
+
+### 0.2
+This release has breaking API changes.
+
+New in this version:
+
+- **Important!** Registering a listener to a registry now requires you to add .register(); at the end of the call. Plugins will fail silently if this is not done. This was done to make it simpler to specify the scope and order for a listener.
+- Added ordering to registry listeners.
+- Added @RegistryScoped annotation.
+- Keys now require a namespace to register, this is to make inter-plugin data access easier and pave the way for future placeholder stuff.
+- TimeFormatService now uses FormatResult for some return types. Use toString() to capture the current state of the FormatResult as a String.
+- Updated MongoDB drivers
+- Started using checker framework
+
+Removed in this version:
+
+- Nuked the Plugin interface. This interface added unnecessary weight to the API and wasn't being used anywhere.
+- The PermissionService no longer has a generic type. This service only has one boolean method to check a permission for the provided subject. Checking the type of this parameter is now done at runtime.
+
+### 0.1.3
+Fixed a critical bug preventing banning and muting with Xodus.
+
+### 0.1.2
+Fixed bug in BaseManager causing silent failure during DB access.
+
+### 0.1.1
+This release fixes an issue where Anvil would sometimes load after plugins that depend on it.
+
+### 0.1
+This is the first release for Anvil. While stable, please note that Anvil is still under heavy development.

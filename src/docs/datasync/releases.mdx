@@ -1,9 +1,10 @@
 ---
-title: DataSync Downloads
+title: Releases
 ---
 
 |Version|Link|
 |-------|----|
+|0.8.0|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.8.0)|
 |0.7.0|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.7.0)|
 |0.6.2|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.6.2)|
 |0.6.1|[download](https://github.com/AnvilPowered/DataSync/releases/tag/v0.6.1)|
@@ -13,6 +14,16 @@ title: DataSync Downloads
 
 
 ## Changelog
+
+### 0.8.0
+Changes:
+- Updated license to LGPL-3.0 (was GPL-3.0)
+- Fixed same name showing up multiple times for /sync up
+- SERIALIZE_WAIT_FOR_SNAPSHOT_ON_JOIN is now DESERIALIZE_ON_JOIN_DELAY_MILLIS (new one will be added to config automatically, old one can be removed manually)
+- Lots of improvements for multi-server environments
+  - Players can now be frozen on join to prevent accidental item loss (configurable with DESERIALIZE_ON_JOIN_DELAY_MILLIS)
+  - DataSync will also try to deal with people leaving before the freeze-time is up
+- Restoring a snapshot created on death no longer kills when restored
 
 ### 0.7.0
 This is the effective re-release of this project. Among other things, the name has been changed from MSDataSync to DataSync.
