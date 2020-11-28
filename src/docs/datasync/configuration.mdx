@@ -2,7 +2,8 @@
 title: DataSync Configuration
 ---
 
-## Serialize Section
+## Serialize
+
 |Setting|Description|Default|
 |-------|-----------|-------|
 |deserializeOnJoin|Whether DataSync should deserialize players on join|true|
@@ -11,14 +12,16 @@ title: DataSync Configuration
 |serializeOnDeath|Whether DataSync should serialize players to the DB on death|true|
 |serializeOnDisconnect|Whether DataSync should serialize players to the DB on disconnect|true|
 
-## Snapshot Section
+## Snapshot
+
 |Setting|Description|Default|
 |-------|-----------|-------|
 |minCount|Minimum number of snapshots to keep before deleting any|5|
 |optimizationStrategy|Snapshot optimization strategy|"60:24", "1440:7"|
 |uploadInterval|Interval for automatic serialization task|5|
 
-## Keys Section
+## Keys
+
 |Key Name|Setting|
 |--------|-------|
 |SERIALIZE_ENABLED_SERIALIZERS|serialize.enabledSerializers|
