@@ -2,182 +2,22 @@
 title: Catalyst Commands
 ---
 
-
-## Ban
-
-Permission: `catalyst.command.ban`
-
-Aliases: `cban`
-
-Usage: `/ban <name> [reason]`
-
-Description: Bans a player.
-
-
-## TempBan
-
-Permission: `catalyst.command.tempban`
-
-Aliases: `ctempban`
-
-Usage: `/tempban <user> <duration> [reason]`
-
-Description: Temporarily bans a player.
-
-## Broadcast
-
-Permission: `catalyst.command.broadcast`
-
-Aliases: `cbroadcast`
-
-Usage: `/broadcast [message]`
-
-Description: Broadcast a message to the proxy.
-
-
-## Find
-
-Permission: `catalyst.command.find`
-
-Aliases: `cfind`
-
-Usage: `/find <player>`
-
-Description: Find which server a player on.
-
-## Info
-
-Permission: `catalyst.command.info`
-
-Aliases: `cinfo`
-
-Usage: `/info <player>`
-
-Description: Get the information of a player.
-
-
-## Kick
-
-Permission: `catalyst.command.kick`, `catalyst.command.kick.exempt`
-
-Aliases: `ckick`
-
-Usage: `/kick <player> [reason]`
-
-Descrption: Kick a player.
-
-
-## Swear / Exception
-
-Permission: `catalyst.command.language.admin`
-
-Usage: `/swear (add|remove <word>)`
-
-Usage: `/exception (add|remove <word>)`
-
-Additional Usage:
-
-* Permission: `catalyst.command.language.list`
-
-* Usage: `/swear list`
-
-* Usage: `/exception list`
-
-Description: Add or remove swear/exception words from the list.
-
-## List
-
-Permission: `catalyst.command.list`
-
-Aliases: `clist`
-
-Usage: `/list`
-
-
-## Message
-
-Permission: `catalyst.command.message`
-
-Aliases: `msg`, `tell`, `whisper`, `m`, `t`
-
-Usage: `/msg <player> [message]`
-
-Description: Send a message to another player.
-
-
-## Mute
-
-Permission: `catalyst.command.mute`, `catalyst.command.mute.exempt`
-
-Aliases: `cmute`
-
-Usage: `/mute <player> [reason]`
-
-Description: Mute a player.
-
-
-## Nickname
-
-Permission: `catalyst.command.nickname`, `catalyst.command.nickname.color`, `catalyst.command.nickname.other`
-
-Aliases: `cnick`, `nickname`
-
-Usage: `/nick <nickname>` or `/nick <player> <nickname>`
-
-Description: Set your nickname or that of another player.
-
-
-## Send
-
-Permission: `catalyst.command.send`
-
-Aliases: `csend`
-
-Usage: `/send <player> <server>`
-
-Description: Send a player to a server.
-
-
-## SocialSpy
-
-Permission: `catalyst.command.socialspy`, `catalyst.command.socialspy.onjoin`
-
-Aliases: `ss`
-
-Usage: `/socialspy`
-
-Description: View private messages of other players.
-
-## Stafflist
-
-Permission: `catalyst.stafflist.base`
-
-* Owner: `catalyst.stafflist.owner`
-
-* Admin: `catalyst.stafflist.admin`
-
-* Staff: `catalyst.stafflist.staff`
-
-Usage: `/stafflist`
-
-Description: View all active staff.
-
-## TempMute
-
-Permission: `catalyst.command.mute`
-
-Aliases: `ctempmute`
-
-Usage: `/tempmute <player> <duration> [reason]`
-
-Description: Temporarily mute a player.
-
-## Ignore
-
-Permission: `catalyst.command.ignore`, `catalyst.command.ignore.exempt`
-
-Aliases: `cignore`
-
-Usage: `/ignore <player>`
-
-Description: Ignore another player.
+|Command|Description|Permission|
+|-------|-----------|----------|
+|**ban &lt;user&gt; &#91;reason&#93;**| Bans a player|catalyst.command.ban catalyst.command.ban.exempt|
+|**tempban &lt;user&gt; &lt;duration&gt; &#91reason&#93;**| Temp bans a player|catalyst.command.tempban catalyst.command.ban.exempt|
+|**broadcast &#91;message&#93;**| Broadcast a message to the proxy|catalyst.command.broadcast|
+|**find &lt;user&gt;**| Finds which server a user is on|catalyst.command.find|
+|**info &lt;user&gt;**| Gathers info from a user|catalyst.command.info|
+|**kick &lt;user&gt; &#91;reason&#93;**| Kicks a user|catalyst.command.kick catalyst.command.kick.exempt|
+|**list**| Lists all online users|catalyst.command.list|
+|**message &lt;user&gt; &#91;message&#93;**| Messages a user| catalyst.command.message|
+|**mute &lt;user&gt; &#91reason&#93;**| Mutes a user| catalyst.command.mute catalyst.command.mute.exempt|
+|**tempmute &lt;user&gt; &lt;duration&gt; &#91;reason&#93;**| Temp mute a user|catalyst.command.tempmute catalyst.command.mute.exempt|
+|**nickname &lt;nickname&gt;**| Sets a nickname for the user| catalyst.command.nickname catalyst.command.nickname.color|
+|**nickname &lt;user&gt; &lt;nickname&gt;**| Sets a nickname for the specified user| catalyst.command.nickname.other|
+|**send &lt;user&gt; &lt;server&gt;**| Send a user to another server| catalyst.admin.command.send|
+|**socialspy**| Toggles SocialSpy| catalyst.command.socialspy catalyst.command.socialspy.onjoin|
+|**stafflist**| Shows all active staff|catalyst.stafflist.base catalyst.stafflist.owner catalyst.stafflist.admin catalyst.stafflist.staff |
+|**staffchat**| Toggles StaffChat|catalyst.admin.command.staffchat|
+|**ignore &lt;user&gt;**| Ignores another user| catalyst.command.ignore catalyst.command.ignore.exempt|
