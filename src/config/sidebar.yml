@@ -12,6 +12,8 @@
       link: 'http://ci.anvilpowered.org'
 - label: 'Anvil'
   items:
+    - label: 'About'
+      link: '/anvil/about'
     - label: 'Commands'
       link: '/anvil/commands'
     - label: 'Configuration'

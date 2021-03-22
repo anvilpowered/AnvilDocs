@@ -3,8 +3,8 @@ module.exports = {
     siteTitle: `AnvilPowered`,
     defaultTitle: `AnvilPowered`,
     siteTitleShort: `Anvil`,
-    siteDescription: `The website for AnvilPowered`,
-    siteUrl: `http://www.anvilpowered.org`,
+    siteDescription: `Documentation for AnvilPowered projects`,
+    siteUrl: `http://docs.anvilpowered.org`,
     siteAuthor: 'AnvilPowered',
     siteImage: `static/anvil_logo.png`,
     siteLanguage: `en`,
@@ -17,7 +17,7 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        githubUrl: `https://github.com/anvilpowered/anvilwebsite`,
+        githubUrl: `https://github.com/AnvilPowered/AnvilDocs`,
       },
     },
     {

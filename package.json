@@ -1,8 +1,8 @@
 {
-  "name": "anvilwebsite",
+  "name": "anvildocs",
   "private": false,
   "version": "0.1.0",
-  "description": "The website for AnvilPowered",
+  "description": "Documentation for AnvilPowered projects",
   "author": "AnvilPowered",
   "license": "LGPL-3.0",
   "dependencies": {
@@ -26,10 +26,10 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gh-pages -d public -b gh-pages -r https://stg-allen:$GH_TOKEN@github.com/AnvilPowered/AnvilWebsite.git"
+    "deploy": "gh-pages -d public -b gh-pages -r https://stg-allen:$GH_TOKEN@github.com/AnvilPowered/AnvilDocs.git"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnvilPowered/AnvilWebsite"
+    "url": "https://github.com/AnvilPowered/AnvilDocs"
   }
 }
